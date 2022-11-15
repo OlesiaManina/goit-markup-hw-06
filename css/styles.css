@@ -638,7 +638,7 @@ header {
     font: inherit;
     font-weight: 700;
     line-height: calc(16 / 14);
-    text-align: center;
+    /* text-align: center; */
     text-transform: uppercase;
     color: var(--second-white-color);
 }
@@ -646,7 +646,7 @@ header {
 .mail-form {
     display: flex;
     justify-content: center;
-    gap: 12px;
+    /* gap: 12px; */
 }
 
 .form-input {
@@ -669,6 +669,7 @@ header {
     align-items: center;
     gap: 10px;
     margin: auto;
+    margin-left: 12px;
 
     cursor: pointer;
     border: none;
@@ -864,7 +865,23 @@ header {
     cursor: pointer;
     border: 1px solid #0000001A;
     border-radius: 50%;
+
+    transition: fill var(--time-animation);
 }
+
+/* .close-btn-icon {
+    fill: var(--third-header-color);
+} */
+
+.close-btn:hover .close-btn-icon,
+.close-btn:focus .close-btn-icon {
+    fill: var(--fourth-blue-color);
+}
+
+/* .close-btn-icon:hover,
+.close-btn-icon:focus {
+    fill: var(--fourth-blue-color);
+} */
 
 .modal-title {
     margin-bottom: 12px;
@@ -891,10 +908,16 @@ header {
 .modal-form-input:hover,
 .modal-form-input:focus {
     border: 1px solid var(--fourth-blue-color);
+    outline: 1px solid var(--fourth-blue-color);
+}
+
+.modal-form-input:hover .form-icon,
+.modal-form-input:focus .form-icon {
+    fill: var(--fourth-blue-color);
 }
 
 .form-field:hover .form-icon,
-.form-field:focus .form-icon {
+.form-field:focus-within .form-icon {
     fill: var(--fourth-blue-color);
 }
 
@@ -918,6 +941,7 @@ header {
 .form-textarea:hover,
 .form-textarea:focus {
     border: 1px solid var(--fourth-blue-color);
+    outline: 1px solid var(--fourth-blue-color);
 }
 
 .form-label {
@@ -1007,6 +1031,8 @@ header {
     letter-spacing: 0.06em;
     color: var(--second-white-color);
     background-color: var(--fourth-blue-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
     transition: background-color var(--time-animation);
 }
 
